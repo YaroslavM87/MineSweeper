@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/setupFragment">
+
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.yaroslavm87.minesweeper.ui.setup.FragmentSetup"
+        android:label="setup_fragment"
+        tools:layout="@layout/setup_fragment">
+        <action
+            android:id="@+id/action_setupFragment_to_mineFieldFragment"
+            app:destination="@id/mineFieldFragment"
+            app:popUpTo="@id/setupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mineFieldFragment"
+        android:name="com.yaroslavm87.minesweeper.ui.game.FragmentMineField"
+        android:label="MineFieldFragment" >
+        <action
+            android:id="@+id/action_mineFieldFragment_to_setupFragment"
+            app:destination="@id/setupFragment" />
+    </fragment>
+</navigation>

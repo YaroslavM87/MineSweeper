@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_small"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/dialog_edit_game_options_field_size_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_field_size"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_grid"
+        app:tint="@color/grey_40" />
+
+    <ImageView
+        android:id="@+id/dialog_edit_game_options_mines_amount_icon_header"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="@dimen/spacing_xmlarge"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_mines_amount_percentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_view_field_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_mine_larger"
+        app:tint="@color/grey_40" />
+
+    <TextView
+        android:id="@+id/text_view_mines_amount_percentage"
+        android:layout_width="85dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_medium"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dialog_edit_game_options_mines_amount_icon_header"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text=" 20%" />
+
+    <TextView
+        android:id="@+id/text_view_field_size"
+        android:layout_width="50dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        android:gravity="center"
+        android:padding="@dimen/spacing_medium"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_edit_game_options_mines_amount_icon_header"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dialog_edit_game_options_field_size_icon"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:text="450" />
+
+    <ImageView
+        android:id="@+id/dialog_edit_game_options_columns_amount_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="@dimen/spacing_smlarge"
+        android:layout_marginTop="@dimen/spacing_xmlarge"
+        app:layout_constraintEnd_toStartOf="@+id/seekbar_columns_amount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_field_size_icon"
+        app:srcCompat="@drawable/ic_left_right_larger"
+        app:tint="@color/grey_40" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar_columns_amount"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_xmlarge"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:max="30"
+        android:progress="15"
+        android:tag="seekbar_columns_amount"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_columns_amount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dialog_edit_game_options_columns_amount_icon"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_field_size_icon" />
+
+    <TextView
+        android:id="@+id/text_view_columns_amount"
+        android:layout_width="@dimen/spacing_xxxlarge"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/spacing_xmlarge"
+        android:layout_marginEnd="@dimen/spacing_smlarge"
+        android:gravity="center"
+        android:padding="@dimen/spacing_medium"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekbar_columns_amount"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_field_size_icon"
+        tools:text="15" />
+
+    <ImageView
+        android:id="@+id/dialog_edit_game_options_rows_amount_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="@dimen/spacing_smlarge"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        app:layout_constraintEnd_toStartOf="@+id/seekbar_rows_amount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_columns_amount_icon"
+        app:srcCompat="@drawable/ic_array_up_down_larger"
+        app:tint="@color/grey_40" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar_rows_amount"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:max="30"
+        android:progress="15"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_rows_amount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dialog_edit_game_options_rows_amount_icon"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_columns_amount_icon" />
+
+    <TextView
+        android:id="@+id/text_view_rows_amount"
+        android:layout_width="@dimen/spacing_xxxlarge"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        android:layout_marginEnd="@dimen/spacing_smlarge"
+        android:gravity="center"
+        android:padding="@dimen/spacing_medium"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekbar_rows_amount"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_columns_amount_icon"
+        tools:text="15" />
+
+    <ImageView
+        android:id="@+id/dialog_edit_game_options_mines_amount_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="@dimen/spacing_smlarge"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        app:layout_constraintEnd_toStartOf="@+id/seekbar_mines_amount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_rows_amount_icon"
+        app:srcCompat="@drawable/ic_mine_larger"
+        app:tint="@color/grey_40" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar_mines_amount"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:max="90"
+        android:progress="100"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_mines_amount_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dialog_edit_game_options_mines_amount_icon"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_rows_amount_icon" />
+
+    <TextView
+        android:id="@+id/text_view_mines_amount_value"
+        android:layout_width="@dimen/spacing_xxxlarge"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginEnd="@dimen/spacing_smlarge"
+        android:layout_marginTop="@dimen/spacing_smlarge"
+        android:gravity="center"
+        android:padding="@dimen/spacing_medium"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekbar_mines_amount"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_game_options_rows_amount_icon"
+        tools:text="90" />
+
+    <Button
+        android:id="@+id/button_apply_changes"
+        android:tag="button_apply_changes"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xmlarge"
+        android:layout_marginBottom="@dimen/spacing_smlarge"
+        android:gravity="center"
+        android:text="OK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_discard_changes"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar_mines_amount" />
+
+    <Button
+        android:id="@+id/button_discard_changes"
+        android:tag="button_discard_changes"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xmlarge"
+        android:layout_marginEnd="@dimen/spacing_smlarge"
+        android:layout_marginBottom="@dimen/spacing_smlarge"
+        android:gravity="center"
+        android:text="CANCEL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar_mines_amount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
